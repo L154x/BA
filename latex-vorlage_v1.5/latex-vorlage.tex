@@ -46,21 +46,25 @@
 % Empfehlung: strukturieren Sie Ihren Text in einzelnen Dateien 
 % und binden Sie diese hier mit \input{includes/dateiname.tex} ein
 
-\input{includes/einleitung.tex}
-\blinddocument
-\input{includes/text_mit_zitaten.tex}
-\input{includes/abbildungen_und_tabellen.tex}
+\input{includes/01_intro.tex}
+\input{includes/02_blockchain.tex}
+\input{latex-vorlage_v1.5/includes/03_Dashboard.tex}
+\input{latex-vorlage_v1.5/includes/04_DesignScience.tex}
+\input{latex-vorlage_v1.5/includes/05_Problem.tex}
+\input{latex-vorlage_v1.5/includes/06_Solution.tex}
+\input{latex-vorlage_v1.5/includes/07_DesignArtifact.tex}
+\input{latex-vorlage_v1.5/includes/08_Demo.tex}
+\input{latex-vorlage_v1.5/includes/09_Evaluation.tex}
+\input{latex-vorlage_v1.5/includes/10_Conclusion.tex}
 
-\input{includes/anhang.tex}
-\input{includes/release_notes.tex}
 %%% Ende des eigentlichen Inhalts %%%
 
 
 %%% Quellenverzeichnisse (keine Anpassungen nötig) %%%
 \clearpage
-\chapter*{List of references}\label{chapter:quellen}
-\addcontentsline{toc}{chapter}{List of references}
-\spezialkopfzeile{List of references}
+\chapter*{Bibliography}\label{chapter:quellen}
+\addcontentsline{toc}{chapter}{Bibliography}
+\spezialkopfzeile{Bibliography}
 
 % alle Quellen außer Gespräche:
 \printbibliography[heading=lit,nottype=online,notkeyword=gespraech,notkeyword=ausblenden]
