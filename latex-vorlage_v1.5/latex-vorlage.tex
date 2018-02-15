@@ -20,6 +20,9 @@
 \input{includes/abstract.tex}
 \cleardoublepage
 
+\renewcommand{\listfigurename}{List of figures}
+\renewcommand{\listtablename}{List of tables}
+
 %%% Inhalts-, Abbildungs-, Tabellenverzeichnisse %%%
 % sollen einzeilig gesetzt werden, um Platz zu sparen 
 \begin{spacing}{1}
@@ -29,9 +32,9 @@
 \clearpage
 \thispagestyle{kapitelkopfzeile}
 \listoffigures
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis} % Abb.verz. ins Inh.verz. aufnehmen
+\addcontentsline{toc}{chapter}{List of figures} % Abb.verz. ins Inh.verz. aufnehmen
 \clearpage
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}   % Tab.verz. ins Inh.verz. aufnehmen
+\addcontentsline{toc}{chapter}{List of tables}   % Tab.verz. ins Inh.verz. aufnehmen
 \listoftables
 \end{spacing}
 
@@ -55,9 +58,9 @@
 
 %%% Quellenverzeichnisse (keine Anpassungen nötig) %%%
 \clearpage
-\chapter*{Quellenverzeichnisse}\label{chapter:quellen}
-\addcontentsline{toc}{chapter}{Quellenverzeichnisse}
-\spezialkopfzeile{Quellenverzeichnisse}
+\chapter*{List of references}\label{chapter:quellen}
+\addcontentsline{toc}{chapter}{List of references}
+\spezialkopfzeile{List of references}
 
 % alle Quellen außer Gespräche:
 \printbibliography[heading=lit,nottype=online,notkeyword=gespraech,notkeyword=ausblenden]

@@ -22,8 +22,8 @@
   bottom=20mm,foot=12mm,includefoot
 ]{geometry}                 % Einstellungen für Ränder
 
-\usepackage[ngerman]{babel} % Spracheinstellungen Deutsch
-\usepackage[babel,german=quotes]{csquotes} % deutsche Anf.zeichen
+\usepackage[english]{babel} % Spracheinstellungen Englisch
+\usepackage[babel,english=british]{csquotes} % deutsche Anf.zeichen
 \usepackage{enumerate}      % anpassbare Nummerier./Aufz.
 \usepackage{graphicx}       % Einbinden von Grafiken
 \usepackage[onehalfspacing]{setspace} % anderthalbzeilig
@@ -52,7 +52,7 @@
 \newcommand{\anhang}[1]{%
   \refstepcounter{anhcnt}
   \setcounter{anhteilcnt}{0}
-  \section*{Anhang \theanhcnt: #1}
+  \section*{Appendix \theanhcnt: #1}
   \addcontentsline{app}{section}{\protect\numberline{A.\theanhcnt}#1}\par
 }
 
@@ -61,11 +61,11 @@
 
 \newcommand{\anhangteil}[1]{%
 	\refstepcounter{anhteilcnt}
-	\subsection*{Anhang~\arabic{anhcnt}/\arabic{anhteilcnt}: #1}
+	\subsection*{Appendix~\arabic{anhcnt}/\arabic{anhteilcnt}: #1}
 	\addcontentsline{app}{subsection}{\protect\numberline{A.\theanhcnt/\arabic{anhteilcnt}}#1}\par
 }
 
-\renewcommand{\theanhteilcnt}{Anhang \theanhcnt/\arabic{anhteilcnt}}
+\renewcommand{\theanhteilcnt}{Appendix \theanhcnt/\arabic{anhteilcnt}}
 
 \usepackage{chngcntr}                % fortlaufende Zähler für Fußnoten, Abbildungen und Tabellen
 \counterwithout{figure}{chapter}
