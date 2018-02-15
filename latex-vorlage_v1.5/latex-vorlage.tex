@@ -1,0 +1,73 @@
+%%% LaTeX-Vorlage Version 1.4 %%%
+\documentclass[a4paper,fontsize=11pt,oneside,parskip=half,headings=normal]{scrreprt} 
+% \usepackage{showframe} % nur für Kontrolle der Ränder 
+
+%%% Präambel einbinden %%%
+\input{includes/_dhbw_praeambel.tex}
+
+%%% Name Ihrer Literatur-Datenbank (ggf. anpassen) %%%
+\bibliography{includes/literatur-datenbank.bib}
+
+\begin{document}
+%%% Deckblatt einbinden %%% 
+% Anpassungen nötig (Name, Titel etc.)
+\input{includes/deckblatt.tex}
+
+%%% Umstellung der Seiten-Nummerierung auf i, ii, iii ... %%%
+\pagenumbering{Roman} 
+
+%%% Abstract (optionale Kurzfassung Ihrer Arbeit) %%%
+\input{includes/abstract.tex}
+\cleardoublepage
+
+%%% Inhalts-, Abbildungs-, Tabellenverzeichnisse %%%
+% sollen einzeilig gesetzt werden, um Platz zu sparen 
+\begin{spacing}{1}
+\tableofcontents
+\clearpage
+\input{includes/abkuerzungen.tex}
+\clearpage
+\thispagestyle{kapitelkopfzeile}
+\listoffigures
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis} % Abb.verz. ins Inh.verz. aufnehmen
+\clearpage
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}   % Tab.verz. ins Inh.verz. aufnehmen
+\listoftables
+\end{spacing}
+
+%%% Umstellung der Seiten-Nummerierung auf 1, 2, 3 ... %%%
+\cleardoublepage
+\pagenumbering{arabic}
+
+%%% Ihr eigentlicher Inhalt %%%
+% Empfehlung: strukturieren Sie Ihren Text in einzelnen Dateien 
+% und binden Sie diese hier mit \input{includes/dateiname.tex} ein
+
+\input{includes/einleitung.tex}
+\blinddocument
+\input{includes/text_mit_zitaten.tex}
+\input{includes/abbildungen_und_tabellen.tex}
+
+\input{includes/anhang.tex}
+\input{includes/release_notes.tex}
+%%% Ende des eigentlichen Inhalts %%%
+
+
+%%% Quellenverzeichnisse (keine Anpassungen nötig) %%%
+\clearpage
+\chapter*{Quellenverzeichnisse}\label{chapter:quellen}
+\addcontentsline{toc}{chapter}{Quellenverzeichnisse}
+\spezialkopfzeile{Quellenverzeichnisse}
+
+% alle Quellen außer Gespräche:
+\printbibliography[heading=lit,nottype=online,notkeyword=gespraech,notkeyword=ausblenden]
+
+% alle Gespräche (diese müssen vom Typ "misc" sein und unter keyword "gespraech" stehen haben)
+\printbibliography[heading=gespraeche,type=misc,keyword=gespraech]
+
+%%% Ehrenwörtliche Erklärung (keine Anpassungen nötig) %%%
+% steht ganz am Ende des Dokuments
+\cleardoublepage
+\input{includes/_dhbw_erklaerung.tex}
+
+\end{document}
