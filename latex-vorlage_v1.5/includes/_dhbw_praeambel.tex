@@ -98,3 +98,19 @@
 \setlength\cftafterloftitleskip{\myAfterTitleSkip}
 \setlength\cftafterlottitleskip{\myAfterTitleSkip}                                                            
 %%% Ende der Präambel %%%
+
+%%%% Für die Interviews %%%%
+
+\newenvironment{xlist}[1][\rule{0.75 cm}{0cm}]{%
+   \begin{list}{}{%
+     \settowidth{\labelwidth}{#1:}
+     \setlength{\labelsep}{0.5cm}
+     \setlength{\leftmargin}{\labelwidth}
+     \addtolength{\leftmargin}{\labelsep}
+     \setlength{\rightmargin}{0pt}
+     \setlength{\parsep}{0.5ex plus 0.2ex minus 0.1ex}
+     \setlength{\itemsep}{0 ex plus 0.2ex}
+     \renewcommand{\makelabel}[1]{##1:\hfil}
+     }
+   }
+{\end{list}}
