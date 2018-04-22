@@ -1,5 +1,38 @@
 \chapter{Design and development}
-\textbf{roughly 15 pages}
-\section{Designing the dashboard}
+Based on the requirements defined in the previous section, this chapter covers the design and the subsequent development of the solution. While the first section presents the preparatory steps leading to the final design of the artifact, the latter section presents the choices that are made regarding technology, development environment and implementation to transform the artifact from a simple design to a working solution.
 
-\section{Developing the dashboard}
+\section{Designing the artifact} \label{sec:ArtifactDesign}
+The first step of the design process consists of specifying the flow of the information. As discussed in \ref{sec:InformationPresentation}, there is no rigid, predefined way of introducing the different concepts to the audience, instead it is upon the author to lead the user through the explanation. The chosen approach divides the artifact into two parts: the guided tour and the overview. This division lets the user decide whether to follow the guided tour which presents a high level introduction to the different topics (and then leads to the overview) or whether to jump straight to the overview which presents these topics, too, but in a more detailed and interactive manner. The following paragraphs now deal with the guided tour before the structure of the overview is presented.
+
+\paragraph{Guided tour} Taking into account the requirements from \ref{sec:ReqSpec}, figure \ref{fig:DesignConcept} presents the flow of information. %It is for this reason that the following graphic (figure \ref{fig:DesignConcept}) is developed which presents the flow of information.
+While the number of boxes behind a topic indicates how much text there will be in the final design, any more detailed information is omitted and will be presented in an ensuing step. 
+
+\begin{figure}
+    \centering
+    \includesvg[width=0.8\linewidth]{graphics/DesignConceptSteps.svg}
+    \caption{Flow of the presented information during the guided tour}
+    \label{fig:DesignConcept}
+\end{figure}
+
+Keeping in mind that the target audience has only little to no knowledge about blockchain technology, the information is presented within a narrative context. With the help of two fictional actors, Anna and Bob, the audience is presented with a brief summary of the finance aspect of crypto economics. This includes a brief summary of the role of money, the role of banks, the process of transferring money between parties and finally how new technologies have affected the way money is accessed and distributed. After explaining how money is digitally transferred in traditional systems, the concept of distributed systems is introduced in form of multiple bank symbols representing a decentralized peer to peer transaction system. Nodes (participants in that network) and their different types are presented and it is shown how Anna and Bob would interact with that system instead of a centralized system. An important information is also the way the distributed system reaches a shared state as compared to a centralized system. By providing a concrete comparison between these two systems (centralized and distributed), the user should be able to recognize the difference more easily. After presenting the nodes, it must be made clear why the system should behave a certain way. As this is based on game theoretical concepts, these are introduced subsequently: By continuing the story line of Anna and Bob (what happens if Anna's node is malicious and wants to hurt the network?) it is shown that a node is incentivized to act in favour of the overall system as that is in its own interest. Once these three concepts, constituting the three pillars of crypto economics, have been introduced, the concept of public and private key infrastructure is presented by showing how Anna and Bob both use their key pairs to create transactions in the network. The concept of transactions then guides the user to one of the technical key characteristics of blockchain: the blocks and the cryptographic hash functions that link those blocks to form an immutable chain of transactions. As indicated in figure \ref{fig:DesignConcept}, this part of the explanation is most likely to need the most text. This topic is then followed by the presentation of consensus mechanisms which are used to attain the same state for every node in the network. Note that this part of the explanation appends to the topic of distributed systems (one shared state) in a way that the presented consensus mechanisms are specific to blockchain, whereas other distributed systems use a different mechanism to reach their shared state. Finally, the guided tour leads to a presentation of different use cases that blockchain enables. The user will see a list of various use cases with which they may interact to learn more. These use cases should be as easy to understand as possible in order to facilitate meaningful learning and to support the user in addressing possible use cases (specific to their position) more precisely.
+
+Albeit the segmenting principle states that different concepts should be presented independently of each other, uncoupling these closely intertwined concepts from each other would actually prove harmful to the learning experience because the user would miss the context in which the specific concept is situated. Therefore, since repetitions cannot be avoided completely, this thesis' intention is to limit them in such a way that the explanation is not repetitive but presents a well rounded and easy to understand explanation of this complex technology.
+
+At the end of the guided tour, the user is presented with the overview, presented in figure \ref{fig:OverviewPic}, that allows deeper insights into specific concepts.
+In this overview, the audience is free to decide about which of the concepts they want to learn more. They are also given the opportunity to test out the concepts, such as playing with hashed values or changing the content of a block within the existing blockchain (see requirement 28a-c).
+
+\begin{figure}
+    \centering
+    \includesvg[width=0.8\linewidth]{graphics/Blockchain_Overview.svg}
+    \caption{Preliminary sketch of the overview section}
+    \label{fig:OverviewPic}
+\end{figure}
+
+After the flow of information is defined, a rough sketch of the different screens the user is led through is designed on paper. The rough draft serves as the basis for the development and it is used to ensure that the requirements are included in the artifact.\footnote{ As the sketches cannot portray which technology is used and what graphical design decisions are made (requirements 12 - 14 and 29 to 31), the actual requirements specification should be regarded, too.} The development of the artifact is described in the following section.
+
+\section{Developing the artifact}
+
+As a first task, before the actual task of implementing the artifact may begin, a technology needs to be identified that meets the requirements 29 to 31. The solution should be location independent, process user interactions and should be easily adapted by other developers in order to be applied in different situations.\footnote{ This means that the different use cases presented in the overview may be changed to accommodate for a specific industry.} A possible solution is that of a web application due to its wide spread use, easy portability, easy deployment and the fact that changes may be easily implemented as the programming/scripting languages HTML, CSS and JavaScript are a common skill set. When following this approach, (independent of whether the files are on the local machine or the web site is hosted online) the artifact is accessed via the browser allowing a quick set-up time and this approach additionally allows its presentation from remote.
+
+
+
