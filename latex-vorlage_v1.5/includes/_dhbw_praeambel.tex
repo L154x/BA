@@ -33,9 +33,11 @@
 \pgfplotsset{
   compat=1.14,% <- current version is 1.14
 }
-\usetikzlibrary{calc}
 \usepackage{subcaption}
+\usepackage{float}
 \usepackage{colortbl}
+\newcommand{\chapquote}[3]{\begin{quotation} {\itshape#1} \end{quotation} \begin{flushright} - #2, \textit{#3}\end{flushright} }
+\usepackage{enumitem}
 % \usepackage{adjustbox}
 \usepackage{multicol}
 \usepackage{arydshln}

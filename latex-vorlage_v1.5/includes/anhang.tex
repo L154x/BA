@@ -6,6 +6,84 @@
 \clearpage
 \spezialkopfzeile{Appendix} % damit in der Kopfzeile das Wort "Anhang" angezeigt wird
 
+
+\anhang{Requirements elicitation} \label{anhang:ReqEng}
+
+The requirements gathering process for this research, presented in chapter \ref{chap:ReqEng} follows closely the requirements elicitation activity, which is an activity of requirements engineering in software engineering. Requirements engineering is a set of activities to develop, document, and manage the specifications a system is expected to meet.\footcites[Cf.][p.16]{SommervilleIntegratedrequirementsengineering2005}[cf.][p.38]{PatakiSystemRequirementsAnalysis2003}
+
+Firstly, it is important to clearly understand what requirements are: Requirements are descriptors of what a system should do, defining services the ideal system must provide and the constraints under which the system must operate.\footcites[Cf.][p.100]{SommervilleSoftwareengineering2011}[cf.][p.95]{IEEEIEEEstandardglossary1990} Requirements can range from high-level abstract statements of services or system constraints to very detailed functional specifications\footcite[Cf.][p.215]{DavisSoftwarerequirementsobjects1993} and may be divided into functional requirements and non-functional requirements, described in the list below.
+
+\begin{itemize}
+    \item \textbf{Functional requirements} A functional requirement defines a function the system must perform.\footcite[Cf.][p.34]{IEEEIEEEstandardglossary1990} It specifies how the system should react to particular inputs and how the system should behave in specific situations.\footcite[Cf.][p.102]{SommervilleSoftwareengineering2011} It defines what actions the system must do (functionality) rather than how it performs these actions. 
+    \item \textbf{Non-functional requirements} A non-functional requirement refers to additional requirements which put constraints on the functionality. These constraints may be a consequence of product requirements, organizational policies or external factors (e.g. reliability, standard processes, interoperability) and often apply to the whole system rather than individual features.\footcite[Cf.][p.102]{SommervilleSoftwareengineering2011}
+\end{itemize}
+
+Separating the requirements gathering from the design process helps to find an objective solution, because the solution is not influenced by design considerations and the requirements do not limit the implementation of the system. The requirements elicitation is the first activity of the requirements engineering process, as presented in figure \ref{fig:REAll}.\footcites[Cf.][p.116]{SommervilleSoftwareengineering2011}[cf.][pp.17]{SommervilleIntegratedrequirementsengineering2005} 
+
+These requirements are collected during the requirements elicitation phase, which is the first of a set of activities in requirements engineering.\footcites[Cf.][p.116]{SommervilleSoftwareengineering2011}[cf.][p.17]{SommervilleIntegratedrequirementsengineering2005} The requirements engineering process is somewhat ill-defined, with different authors presenting different activities and practitioners using a large number of different methods to develop the requirements.\footcite[Cf.][p.225]{ZhangEffectiverequirementsdevelopmentA2007} The main aspects of the requirements engineering process is visualized in figure \ref{fig:REAll}. The process starts with the elicitation of the requirements from a variety of knowledge sources in order to collect needed information. The requirements are consequently analyzed in order to detect overlaps and conflicts and the generated knowledge is then added to the understood knowledge.\footcite[Cf.][p.17]{SommervilleIntegratedrequirementsengineering2005} That understood knowledge serves as input for the next step, the specification, where the requirements are structured and recorded in a document (the structured requirements specification (SRS)). The documentation may be done via natural language or dedicated conceptual models, so that the requirements are clear, understandable and correct, and constitutes the final output of the overall requirements engineering process.\footcites[Cf.][p.17]{SommervilleIntegratedrequirementsengineering2005}[chapter 1]{PohlRequirementsengineeringfundamentals2011} The fourth activity comprises the validation of these requirements. It checks again if the requirements are correct and that they indeed correspond to the stakeholders' needs.\footcite[Cf.][p.17]{SommervilleIntegratedrequirementsengineering2005}
+It is an iterative cycle, as inconsistent, ambiguous or missing information that is uncovered during the specification or validation steps is tried to be resolved in another elicitation session. 
+Major players in the literature agree on these four main activities,\footcites[Cf.][p.225]{ZhangEffectiverequirementsdevelopmentA2007}[cf.][p.220]{DavisSoftwarerequirementsobjects1993}[cf.][chapter 1]{PohlRequirementsengineeringfundamentals2011}[cf.][p.116]{SommervilleSoftwareengineering2011} but Sommerville and Pohl and Rupp also add negotiation (reconciling conflicting stakeholders' views) and management (actively controlling the changes to the requirements) to create a full picture of the requirements engineering process.\footcites[Cf.][p.17]{SommervilleSoftwareengineering2011}[cf.][chapter 1]{PohlRequirementsengineeringfundamentals2011}
+
+\begin{figure}
+    \centering
+    \includesvg[width=\textwidth]{graphics/Zhang_textcurves}
+    \caption[Summary of the requirements engineering process.]{Summary of the requirements engineering process.\footnote{With changes taken from \cite{ZhangEffectiverequirementsdevelopmentA2007}, p.225.}}
+    \label{fig:REAll}
+\end{figure}
+%\footnotetext{With changes taken from \cite{ZhangEffectiverequirementsdevelopmentA2007}, p.225}
+Since this research bases the requirements gathering on the requirements elicitation activity, only this activity and the methods used for its execution are more closely examined in the following paragraph. 
+
+\paragraph{Requirements Elicitation} Requirements elicitation refers to the gathering of information to extract the requirements that the system has to fulfill. Possible sources of information that allow the discovery of requirements need to be identified.\footcites[Cf.][p.2]{TiwariMethodologySelectionRequirement2017}[cf.][p.17]{SommervilleIntegratedrequirementsengineering2005} These knowledge sources may be the stakeholders (users, project sponsors, managers) as presented in figure \ref{fig:REAll}, or other resources (e.g. existing systems). It is important to not only discover but to fully understand the needs of these potential stakeholders in order to communicate them to the system developers. Therefore, the elicitation of the requirements is an important and critical step in the RE process and requires the use of appropriate methods.\footcites[Cf.][p.232]{ZhangEffectiverequirementsdevelopmentA2007}[cf.][pp.19 et seq]{ZowghiRequirementselicitationsurvey2005}
+
+The gathering of information, and subsequently of the requirements may be done in numerous ways. These methods may be categorized by their common nature:\footcite[Cf.][p.170]{HickeyElicitationtechniqueselection2003} 
+\begin{itemize}
+    \item \textbf{Conversational methods}: Interview, questionnaire, survey\footcites[Cf.][chapter 3]{PohlRequirementsengineeringfundamentals2011}[cf.][p.170]{HickeyElicitationtechniqueselection2003}
+    \item \textbf{Observational methods}: Social analysis, observation, ethnographic study\footcites[Cf.][p.227]{ZhangEffectiverequirementsdevelopmentA2007}[cf.][p.173]{HickeyElicitationtechniqueselection2003}
+    \item \textbf{Creative methods}: Brainstorming, analogy techniques\footcite[Cf.][chapter 3]{PohlRequirementsengineeringfundamentals2011}
+    \item \textbf{Analytic methods}: Requirement reuse, documentation study, protocol analysis, discourse analysis \footcites[Cf.][p.12]{GoguenTechniquesrequirementelicitation1993}[cf.][pp.227-228]{ZhangEffectiverequirementsdevelopmentA2007}[cf.][p.2]{TiwariMethodologySelectionRequirement2017}
+    \item \textbf{Synthetic methods}: Scenarios, prototyping, joint application development, perspective based reading\footcites[Cf.][p.228]{ZhangEffectiverequirementsdevelopmentA2007}[cf.][chapter 3]{PohlRequirementsengineeringfundamentals2011}[cf.][p.3]{TiwariMethodologySelectionRequirement2017}
+\end{itemize}
+
+The observational methods put the researchers in a more passive role, where they observe the stakeholders in a certain situation and notes the work process, potential mistakes, risks, and open questions, which constitute the inputs for the formulation of the requirements.\footcite[Cf.][chapter 3]{PohlRequirementsengineeringfundamentals2011} Creative methods, as the name suggest, serve the purpose to discover new and innovative requirements.\footcite[Cf.][chapter 3]{PohlRequirementsengineeringfundamentals2011} Analytic methods focus on extracting requirements from existing documents, making them especially useful to quickly formulate fine-grained requirements from existing documentation.\footcite[Cf.][p.228]{ZhangEffectiverequirementsdevelopmentA2007} Finally, synthetic methods are a combination of conversational, observational, creative, and analytic techniques.\footcite[Cf.][p.228]{ZhangEffectiverequirementsdevelopmentA2007} 
+
+All techniques and methods have their strengths and weaknesses, which is why a combination of methods is often used in practice. Nonetheless, conversational methods have proven to be the primary method to effectively collect knowledge, because they provide a natural way to express ideas, problems, and questions.\footcites[Cf.][pp.226/227]{ZhangEffectiverequirementsdevelopmentA2007}[cf.][p.42]{ZowghiRequirementselicitationsurvey2005}
+
+
+\anhang{Detailed question compendium}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\captionsetup{list=no}
+\begin{table}[H]
+		\begin{tabular}{ | p{0.7cm} P{2.6cm} p{5cm} p{6cm}|}
+		\hline
+	No. & Question & Expected Answer & Further questions \\ \hline
+	1a & What is your role within HPE? & Description of their work; daily business; their tasks. "I am … and my overall task is to …. For this, I do … and …" & Could you please elaborate on this further? What exactly do you <sell/do>? \\ \hline
+	1b & Who are your clients?  & Description of their business partners, their industry, the level of their partners (CIO, Managers. Developers, …). "I work with…" & From what industry do most of your clients come? What region are they from? For what purpose do they come to you? What problems drive them? \\ \hline \hline
+	2a & What do you understand under the term "blockchain"?  & Short definition of the blockchain technology. "Blockchain is a data structure, which allows the secure and immutable storage of data, …" & Is the term familiar to you? Where did you first hear about it? In which context? \\ \hline
+	2b & How did you gain an understanding of blockchain?  & Description of learning resources used to get to know blockchain. "I watched a lot of YouTube videos" or "I talked with my colleagues" or "I read books about it" etc. & How much time did you spend on trying to learn about the technology? How did you do this? How many resources did you look at? \\ \hline
+	2c & Many find it hard to understand this topic. In your opinion, what might be the cause for this?  & Description of the different reasons why blockchain is difficult. "It's complex", "Many different underlying concepts", "Takes too long", … & Did you have any trouble understanding this topic? Why do you think so? Which topic do you find very difficult to understand? \\ \hline
+	2d & What do you think is the best way to learn about this new technology?  & Short brainstorming and presentation of various learning resources. "Learning works best with examples" or "I would recommend …." & In general, how do you learn best? What would you consider a good way to learn about technical concepts? What platforms do you recommend?  \\ \hline
+	2e & Why might blockchain be interesting to you or your clients? What improvements do you expect?  & Description of use cases specific to their role or industry. "I think it might be used in …" or "I think it would help my clients do …" & What do you think are general use cases for blockchain? How can HPE attribute to this? \\\hline
+    \end{tabular}
+    \caption{Detailed question compendium for the expert interviews, questions 1a to 2e}
+    \label{tab:my_label}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ | p{0.7cm} P{2.6cm} p{5cm} p{6cm}|}
+    \hline
+    2f & How would you estimate your clients’ knowledge about blockchain? & Brief estimation of what their clients know of blockchain. "I think they know …" or "They probably don't know anything" & Could you give an estimate on their competency regarding blockchain? On which level do you think they know this topic? \\\hline
+    2g & What is your opinion regarding the current hype about blockchain? & Commentary to the blockchain hype, maybe because of the price surge or the media coverage. "I feel it is just hot air" or "I feel that behind the hype there is some truth .." & What is for you "hype"? Would blockchain fall under this issue? From where do these hype-issues originate? Do you think blockchain will live up to its name? \\ \hline \hline
+	3a & What do you think is the optimal way to explain blockchain to novices?  & Short brainstorming and presentation of various learning resources and estimation of abstraction level of an appropriate explanation. "It should start with …" & How would you explain blockchain to your peers? What concepts would you include? Which ones not and why? \\ \hline 
+	3b & What components of a blockchain should it contain? & Enumeration of the most important concepts of blockchain technology. "Hash values" or "immutable ledger" or "cryptography", etc. & What is the most important aspect of blockchain? What concepts is it based on? \\ \hline
+	3c & How should such an explanation be structured to be helpful for clients? What additional information should it include?  & Brainstorming how the explanation would change for a business context. "It should show which problem it solves by …" or "More relevant examples" & What interests your clients/partners in a technology? What are they looking for in a technology? What do they expect to receive from it? \\ \hline
+    \end{tabular}
+    \caption{Detailed question compendium for the expert interviews, questions 2f to 3c }
+    \label{tab:my_label}
+\end{table}
+
+
 \anhang{Interview Transcripts}\label{Interviews}
 
 \lstset{language=TeX, % hervorzuhebende Keywords definieren
@@ -145,6 +223,52 @@ This is the transcription of the complete interview between Björn Paulewicz (In
 \end{xlist}
 
 
+\anhang{Qualitative content analysis assets}
+
+\anhangteil{The process of Mayring's qualitative content analysis} \label{anhang:QualitativeContentAnalysis}
+
+Mayring defines the process of the analysis, illustrated in figure \ref{fig:MayringProcess}, as follows: 
+\begin{enumerate}
+    \item \textbf{Definition of the material}: The material on which the analysis is based must be defined exactly. The defined set of material is not to be changed during the analysis.
+    \item \textbf{Analysis of the situation of origin}: The circumstances and the setting in which the material is collected needs to be described. This description includes the participating parties, the socio-cultural background, the place where the collection takes place, as well as how the material is collected.
+    \item \textbf{Formal characteristics of the material}: This step documents the form of the material that is analyzed. A possible description may be: \textit{selective transcripts}
+    \item \textbf{Direction of analysis}: The focus of the interpretation is defined. By stating which type of information is of interest and why, it is made clear why other aspects are left out of the analysis.
+    \item \textbf{Theoretical differentiation of sub-components of the problem}: This step is characteristic for the qualitative content analysis. It documents the research questions that characterize the analysis and states their importance based on the respective literature.
+    \item \textbf{Determination of techniques of analysis and establishment of a concrete procedural model}: Mayring has identified a set of different analysis techniques that may are either a form of summary (create a comprehensive overview), explication (increase understanding of particular text passages), or structuring (assess the material regarding pre-defined criteria). The technique chosen further defines the steps thereafter.
+    \item \textbf{Definition of content analytical units}: There are three types of content analytical units that are used for segmentation in a latter step: the coding unit (smallest component of material which defines the sensitivity of the analysis), the context unit (the largest text component that may fall within one category), and the recording unit (decides which text components are to be analyzed and the order of the analysis).
+    \item \textbf{Analytical steps taken by means of the category system}: These steps depend on the analysis technique chosen and are described in a following paragraph. Common to all techniques is the creation of a category system that is used to analyze the material.
+    \item \textbf{Re-checking the category system}: The category system is applied to the material and other bodies of literature on the study with the intention to reduce the number of categories and refine the category system. 
+    \item \textbf{Interpretation of the results}: The results of the analysis are interpreted with respect to the underlying research question in order to gain a comprehensive, generalized answer to that question.
+    \item \textbf{Application of content-analytical quality criteria}: As with any scientific method, quality controls must be applied in order to assess the objectivity, reliability and validity. Therefore, the analysis is judged by its semantical validity, sampling validity, predictive validity, construct validity, stability, reproducibility and accuracy.\footcites[Cf.][p.40 et seqq]{MayringQualitativeContentAnalysis2014}[cf.][p.280]{Flickintroductionqualitativeresearch2009}
+\end{enumerate}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphics/MayringProcess.png}
+    \caption[The general model of the content-analytical process.]{The general model of the content-analytical process.\footnotemark}
+    \label{fig:MayringProcess}
+\end{figure}
+\footnotetext{Taken from \cite{MayringQualitativeContentAnalysis2014}, p.54}
+
+This process is as a model and must be adapted to fit the material and the specific research problem. For this study, the purpose of the analysis is to extract information regarding the problems and struggles, the interviewees experience when trying to understand the blockchain technology. For this purpose, the material is summarized, which creates an abstraction from the material that correctly represents/generalized said material. \footcite[Cf.][p.68]{MayringQualitativeContentAnalysis2014} The summarizing technique is comprised of four steps: 1) Paraphrasing the content-bearing text components, 2) generalizing these to a certain abstraction level, 3) reducing these in a first attempt to remove semantically identical paraphrases and 4) reducing these a second time through binding and integration of paraphrases on the envisaged abstraction level. After these steps are completed, the new statements are put into the category system (step 8), whose exactness/applicability is tested after 10-50\% of material has been sighted. If the level of abstraction does not meet the desired level, the category system must be revised and all information re-evaluated.\footcite[Cf.][p.68 et seq]{MayringQualitativeContentAnalysis2014}
+
+\anhangteil{The completed category system}
+
+\textbf{Hier muss noch die Excel Tabelle irgendwie rein!}
+
+
+\anhang{Screen clippings of the artifact}
+\anhangteil{Overview, larger version of figure \ref{fig:OverviewPic}}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.9\textwidth, angle=90]{latex-vorlage_v1.5/graphics/Overview_Big.png}
+    \caption{The symbols within the overview lead to more information regarding transactions, consensus mechanisms, hash functions and use cases (no red circle). Larger version of figure \ref{fig:OverviewPic}}
+    \label{fig:my_label}
+\end{figure}
+
+
+\newpage 
 \anhang{Evaluation assets}
 
 \anhangteil{Questionnaire}\label{anhang:EvaluationQuestionnaire}
@@ -158,7 +282,7 @@ Before you watch the explanations or the tutorial, please respond to the followi
         \item Do you understand how bitocin works?
         \item Do you know blockchain?
         \item Do you understand how blockchain works?
-        \item Do you know what crypto economics (the underlying concepts within finance, informatics, and economics) means?
+        \item Do you know what cryptoeconomics (the underlying concepts within finance, informatics, and economics) means?
     \end{enumerate}
     \item On a scale from 1 ("I do not know anything about it.") to 10 ("I understand the various different underlying components of the blockchain technology in detail."), how confident do you feel about your knowledge about blockchain technology?
     \item Please give a detailed response (roughly several sentences): How would you explain the blockchain technology to your peers?
@@ -184,5 +308,6 @@ Please answer the following questions after you have finished the videos or the 
     \item What did you dislike about the explanation? What elements were you missing?
 \end{enumerate}
 
-
 \anhangteil{Responses to the questionnaire} \label{anhang:ResponsesQuestionnaire}
+
+
