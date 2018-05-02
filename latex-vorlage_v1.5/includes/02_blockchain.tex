@@ -28,11 +28,11 @@ The capabilities of blockchain go far beyond providing a distributed ledger if s
 
 In conclusion, blockchain technology shows the following characteristics: It is distributed, digital transactions no longer necessitate a middleman to be executed securely. The blockchain is encrypted, it uses public and private key pairs to establish virtual security. Blockchain is public, anyone is able to view all transactions at all times because they lie on the network and not in one central database, and the code is open-sourced. Finally, the technology enables an immutable, complete history of all transactions.\footcite[Cf.][p.5]{Tapscott.2017} All these characteristics combined constitute blockchain's potential to disrupt economic sectors by providing a new way to securely store valuable digital assets and to transact between untrusted parties. They rely on the interplay of different underlying concepts, which the next paragraph summarizes under the term cryptoeconomics.
 
-\paragraph{The cryptoeconomics of blockchain} From another point of view, blockchain may also be described as the product of financial, economic and information technology (IT) concepts. In this paper, the term cryptoeconomics refers to these three underlying concepts,\foonote{Cf. \cite{BabbittCryptoeconomicDesignProposed2015}, p.1. Note however, that different definitions of this term exist due to its very young age.}  which have existed long before the advent of blockchain, but were previously only regarded independently from each other.\footcites[Cf.][p.2]{DavidsonEconomicsBlockchain2016}[cf.][p.21]{AntonopolousAndreasM..2017}[cf.][p.110]{RabahDigitalCryptoeconomicsPowered2017}
+\paragraph{The cryptoeconomics of blockchain} From another point of view, blockchain may also be described as the product of financial, economic and information technology (IT) concepts. In this paper, cryptoeconomics refers to these three underlying concepts,\footnote{Cf. \cite{BabbittCryptoeconomicDesignProposed2015}, p.1. Note however, that different definitions of this term exist due to its very young age.}  which have existed long before the advent of blockchain, but were previously only regarded independently from each other.\footcites[Cf.][p.2]{DavidsonEconomicsBlockchain2016}[cf.][p.21]{AntonopolousAndreasM..2017}[cf.][p.110]{RabahDigitalCryptoeconomicsPowered2017}
 \begin{itemize}[noitemsep]
     \item \textbf{IT}: The above-described characteristics are enabled by the combination of cryptography (public and private key infrastructure, elliptic curve cryptography, hash functions) and distributed systems (peer to peer network, concurrency, append-only data structures).
     \item \textbf{Finance}: While the concepts within IT describe a logical world within the realms of mathematics, the introduction of humans necessitates the consideration of further concepts such as monetary theory regarding the question \enquote{What is money?} and the intrinsic value of goods.
-    \item \textbf{Economics}: It also requires the consideration and application of economic values and game-theoretic approaches, such as the role of markets, definition of supply \& demand, the incentivization of market players, resulting in the development of the presented consensus mechanisms.
+    \item \textbf{Economics}: It also requires the consideration and application of economic values and game-theoretic approaches, such as the role of markets, definition of supply \& demand, the incentivization of market players, resulting in the development of the presented consensus mechanisms, and thus, the generation of valuable digital assets.\footcite[Cf.][\textit{Cryptoeconomics}]{BashirMasteringBlockchainSecond2018}
 \end{itemize}
 
 % \section{Transactions} \label{sec:TX}
@@ -43,6 +43,16 @@ In conclusion, blockchain technology shows the following characteristics: It is 
 % Even though the first implementation of blockchain was motivated by providing a decentralized alternative to financial institutions,\footcite[Cf.][p.2]{Nakamoto.2008} the new defined data structure offers a variety of additional use cases that will be explored in the following section.
 
 \section{Applications of blockchain technology} \label{sec:SmartContracts}
+The growing interest in the blockchain technology, mostly driven by the rise in popularity of the cryptocurrency bitcoin, has revealed that the technology covers various use cases which are explored in the following paragraphs. The applications of the technology are multi-facetted and too many to be listed in this section. Because of this, this paper builds on the above-mentioned characteristics, describes the building blocks which constitute the different use cases, and presents two exemplary use cases of two different industries. For more detailed information about possible applications, please refer to \cite{AntonopolousAndreasM..2017}, \cite{SchatskybitcoinBlockchaincoming2015}, or \cite{Schutte.2017}.
+
+
+
+Especially the financial industry, which Satoshi Nakamoto tried to partially replace with their bitcoin implementation, is slowly realizing the potential this technology might hold for their businesses. Financial institutions form alliances, such as the R3 Group, in order to collectively research and implement posisble improvements to their processes. These include the near-real time settlement of cross-border payments and private securities trading, resulting in less resource-intensive, more time-effective, and therefore more cost-effective processes.
+
+Other sectors, such as health and life sciences, but also the public sector, could benefit of the possibility to securely store important data. A distributed and immutable storage of personal records, where the patients retain control over their data and choose which party may access which information, might be used for medical records, for land-ownership registration, for voting-records, or for vehicle registries, among others.\footcites[Cf.][]{SchatskybitcoinBlockchaincoming2015}[cf.][chapter 12]{AntonopolousAndreasM..2017}[cf.][p.167]{XXXX} 
+
+The tamper proof storage of data would also be useful for other industries, such as consumer products and retail, where companies can track their assets and use that information to improve their supply chain processes or warranties.\footcite[Cf.][p.31]{GOV.2016} An example in the automotive industry might be the tracking of a car's mileage to ensure it is not tampered with. This would benefit both the consumer and the producer as they may base their buying decision (or any decisions regarding warranty claims) on trustworthy data.
+
 
 
 % \section{An overview of the blockchain}
@@ -54,3 +64,6 @@ In conclusion, blockchain technology shows the following characteristics: It is 
 % \paragraph{Cryptography}
 % \paragraph{Monetary theory}
 % \paragraph{Game theory}
+
+
+XXX = Introduction to ethereum und solidity -> Literatur noch einfügen!
