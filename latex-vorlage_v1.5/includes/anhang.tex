@@ -24,6 +24,7 @@ These requirements are collected during the requirements elicitation phase, whic
 It is an iterative cycle, as inconsistent, ambiguous or missing information that is uncovered during the specification or validation steps is tried to be resolved in another elicitation session. 
 Major players in the literature agree on these four main activities,\footcites[Cf.][p.225]{ZhangEffectiverequirementsdevelopmentA2007}[cf.][p.220]{DavisSoftwarerequirementsobjects1993}[cf.][chapter 1]{PohlRequirementsengineeringfundamentals2011}[cf.][p.116]{SommervilleSoftwareengineering2011} but Sommerville and Pohl and Rupp also add negotiation (reconciling conflicting stakeholders' views) and management (actively controlling the changes to the requirements) to create a full picture of the requirements engineering process.\footcites[Cf.][p.17]{SommervilleSoftwareengineering2011}[cf.][chapter 1]{PohlRequirementsengineeringfundamentals2011}
 
+\captionsetup{list=no}
 \begin{figure}
     \centering
     \includesvg[width=\textwidth]{graphics/Zhang_textcurves}
@@ -80,7 +81,7 @@ All techniques and methods have their strengths and weaknesses, which is why a c
 	3c & How should such an explanation be structured to be helpful for clients? What additional information should it include?  & Brainstorming how the explanation would change for a business context. "It should show which problem it solves by …" or "More relevant examples" & What interests your clients/partners in a technology? What are they looking for in a technology? What do they expect to receive from it? \\ \hline
     \end{tabular}
     \caption{Detailed question compendium for the expert interviews, questions 2f to 3c }
-    \label{tab:my_label}
+    \label{tab:my_label1}
 \end{table}
 
 \anhang{Interview transcripts}\label{Interviews}
@@ -429,7 +430,7 @@ This process is as a model and must be adapted to fit the material and the speci
 	BP & 5 & P76: Transform the topic into something very pithy and easy to understand and do not try to be too technically correct & The easier and pithier the examples, the better it is understood   \\ 
 	BP & 5 & P77: You need to differentiate at the beginning who the client is & Differentiate between different information needs and knowledge levels and adapt the explanation accordingly   \\ 
 	\end{tabularx}
-    \label{tab:my_label}
+    \label{tab:my_label2}
 \end{table}
 
 \begin{table}[H]
@@ -441,7 +442,7 @@ This process is as a model and must be adapted to fit the material and the speci
 	BP & 5 & P80: It is important to create interest in the topic by providing workshops, going to conferences and to create some transparency of what that technology is & By providing learning resources, the technology is made more transparent and accessible   \\ 
     \end{tabularx}
     \caption{Paraphrases and generalizations from the interview with Björn Paulewicz. Page no. refers to the page in the appendix}
-    \label{tab:my_label}
+    \label{tab:my_label3}
 \end{table}
 
 \paragraph{Reduction} This is the first reduction of the paraphrases and generalizations: 
@@ -477,8 +478,6 @@ This process is as a model and must be adapted to fit the material and the speci
 	RB & 2 & P94: Blockchain is good for new business models & Blockchain is suited for new business models and start ups   \\  
 	RB & 2 & P95: Traditional business models may adapt DLT for their business & DLt may be adapted to fit for traditional models and to drive better results   \\  
 	RB & 3 & P96: DLT will bring cost optimization, better auditing, higher information transparency for traditional businesses & / \\
-	RB & 3 & P97: DLT is automated and based-on-rules, but not really decentralized & /   \\  
-	RB & 3 & P98: General knowledge of most clients is on level 3 from 10 (expert) & General audience understands blockchain on a low level (3/10)   \\  
 	\end{tabularx}
 \end{table}
 
@@ -486,6 +485,8 @@ This process is as a model and must be adapted to fit the material and the speci
     \centering
     \begin{tabularx}{\textwidth}{ll|X|p{4.5cm}}
 	Case & Page & Paraphrase & Generalization \\ \hline
+	RB & 3 & P97: DLT is automated and based-on-rules, but not really decentralized & /   \\  
+	RB & 3 & P98: General knowledge of most clients is on level 3 from 10 (expert) & General audience understands blockchain on a low level (3/10)   \\  
 	RB & 3 & P99: But different depending on the conversational partner (CEO or developer) & Knowledge is different from person to person   \\  
 	RB & 3 & P100: Level 3 means there is no difference between DLT and Blockchain for them & Difficulty to differentiate between dlt and blockchain   \\  
 	RB & 3 & P101: Many are missing the understanding how and why blockchain works & Difficulty to understand how and why blockchain works   \\  
@@ -499,8 +500,6 @@ This process is as a model and must be adapted to fit the material and the speci
 	RB & 4 & P109: The CEO does not need to understand all technological concepts but rather the potential use cases & /   \\  
 	RB & 4 & P110: It is important to define what everybody should know (blockchain basics) and what only some need to know & Differentiate between blockchain basics, that everybody involved should know and advanced concepts   \\  
 	RB & 4 & P111: Everybody should understand the difference between DLT and blockchain & Everybody should understand difference between DLT and blockchain     \\  
-	RB & 4 & P112: Everybody should know the difference between a cryptocurrency and the technology & Everybody should understand difference between crypto currency (concrete implementation) and the general technology \\ 
-	RB & 4 & P113: For learning, visualization is what I would have liked to have & More visualizations in explanations   \\  
 	\end{tabularx}
 \end{table}
 
@@ -508,6 +507,8 @@ This process is as a model and must be adapted to fit the material and the speci
     \centering
     \begin{tabularx}{\textwidth}{ll|X|p{4.5cm}}
 	Case & Page & Paraphrase & Generalization \\ \hline
+	RB & 4 & P112: Everybody should know the difference between a cryptocurrency and the technology & Everybody should understand difference between crypto currency (concrete implementation) and the general technology \\ 
+	RB & 4 & P113: For learning, visualization is what I would have liked to have & More visualizations in explanations   \\  
 	RB & 4 & P114: Possibly more interaction with the visualizations to test and play around with & More interaction in explanations   \\  
 	RB & 4 & P115: Need more explanation with the focus on the impacts of the technology & Explanations should show the business impact of the technology   \\  
 	RB & 5 & P116: All basic technologies must be included: Peer-to-peer-network, cryptographic functions, consensus mechanisms, and public and private key cryptography & an explanation must include peer-to-peer networking, cryptographic functions and public private key cryptography as well as consensus mechanisms   \\  
@@ -522,7 +523,7 @@ This process is as a model and must be adapted to fit the material and the speci
 	RB & 5 & P125: Additionally show difference between transaction and interaction with smart contracts & Also show difference transaction and smart contract   \\  
     \end{tabularx}
     \caption{Paraphrases and generalizations from the interview with Ralph Beckmann. Page no. refers to the page in the appendix}
-    \label{tab:my_label}
+    \label{tab:my_label4}
 \end{table}
 
 \paragraph{Reduction} This is the first reduction of the paraphrases and generalizations: 
@@ -579,18 +580,17 @@ This process is as a model and must be adapted to fit the material and the speci
 	BK & 4 & P150: We have only few techies here, so you need to use examples which describe what blockchain actually does or why it is an ideal to solution to a specific problem and use one from everyday life & Pithy, practical examples from real life help to understand what the blockchain does \\  
 	BK & 4 & P151: Blockchain is hyped because it presents a fully new way of treating data (as is the trend nowadays to go to distributed systems) & Blockchain follows the trend of distributing responsibilty in a new and unforeseen way \\  
 	BK & 4 & P152: Blockchain is the best example for showing that one does something together in a group, it does not work alone & Blockchain does not work if only one party is involved \\  
-	BK & 5 & P153: If one poses the majority in the blockchain, such as when using Blockchain as a service, then one can still tamper with the system & Blockchain should be fully distributed, services such as BaaS defeat ist purpose because it can still be cheated \\  
+	BK & 5 & P153: If one poses the majority in the blockchain, such as when using blockchain as a service, then one can still tamper with the system & Blockchain should be fully distributed, services such as BaaS defeat its purpose because it can still be cheated \\  
 	BK & 5 & P154: It only works if it is truely distributed and you have included more partners such as the ADAC or an insurance company & For blockchain to work correctly, it must be distributed \\ 
 	BK & 5 & P155: It is important to know the technicalities for those who implement it & Technical details are needed by the developers \\
+	BK & 5 & P156: For anyone who is looking for solutions, it is not important to know all technical details & It depends on their role, not everyone needs to know the details \\  
 \end{tabularx}
-\caption{Paraphrases and generalizations from the interview with Bernd Kammholz. Page no. refers to the page in the appendix}
 \end{table}
 
 \begin{table}[H]
     \centering
     \begin{tabularx}{\textwidth}{ll|X|p{4.5cm}}
 	Case & Page & Paraphrase & Generalization \\ \hline
-	BK & 5 & P156: For anyone who is looking for solutions, it is not important to know all technical details & It depends on their role, not everyone needs to know the details \\  
 	BK & 5 & P157: You cannot save all data inside the blockchain, which is why you would use hashes and people should know that  & People should know the reason why hashes are used but not necessarily more \\  
 	BK & 6 & P158: There are specialisits who know how it works in detail & It is the role of specialists to know the details \\  
 	BK & 6 & P159: You should answer the question: what does it do for me? & Explain what value the blockchain offers \\  
@@ -601,6 +601,7 @@ This process is as a model and must be adapted to fit the material and the speci
 	BK & 6 & P164: It is important to take examples out of your partner's environment & Use examples that are relevant to the audience \\  
 	BK & 6 & P165: If you say to a cashier what is relevant to their work you are more likely to have won their interest than if you don't & A cashier would need an example relevant to their work \\ 
 \end{tabularx}
+\caption{Paraphrases and generalizations from the interview with Bernd Kammholz. Page no. refers to the page in the appendix}
 \end{table}
 
 \paragraph{Reduction} This is the first reduction of the paraphrases and generalizations: 
@@ -835,12 +836,12 @@ On the basis of the reductions, several categories are formed. The first table s
     \caption{Categories 4 and 5 and their respective paraphrases}
 \end{table}
 
-\anhang{Screen clippings of the artifact}
-\anhangteil{Overview, larger version of figure \ref{fig:OverviewPic}}
+
+\anhang{Screen clipping of the artifact's overview} \label{anhang:OverviewBild}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[height=0.85\textwidth, angle=90]{latex-vorlage_v1.5/graphics/Overview_Big.png}
+    \includegraphics[height=0.9\textwidth, angle=90]{latex-vorlage_v1.5/graphics/Overview_Big.png}
     \caption{The symbols within the overview lead to more information regarding transactions, consensus mechanisms, hash functions and use cases (no red circle). Larger version of figure \ref{fig:OverviewPic}}
     \label{fig:my_label}
 \end{figure}
